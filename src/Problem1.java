@@ -1,4 +1,4 @@
-import static java.lang.Integer.parseInt;
+
 
 public class Problem1 {
     public static void main(String[] args) {
