@@ -9,7 +9,8 @@ public class Lab1Main {
             arr[i]=scan.nextInt();
         }*/
         String str="2345f6789";
-        System.out.println(binomialCoefficent(2,1));
+        printArray(reverse(new int[]{3, 4, 5, 2, 4},0,5-1));
+
 
 
     }
@@ -74,14 +75,15 @@ public class Lab1Main {
             return pow(a,n-1)*a;
         }
     }
-    public static int[] reverse(int[] arr,int[] revArr,int n){
-        if(n==-1){
+    public static int[] reverse(int[] arr,int left,int right){
+        if(right<=1){
             return arr;
         }
         else{
-            reverse(arr,revArr,n-1);
-            revArr[revArr.length-n-1]=arr[n];
-            return revArr;
+            int temp=arr[right];
+            arr[right]=arr[left];
+            arr[left]=temp;
+            return reverse(arr,left+1,right-1);
         }
     }
     public static boolean isDigit(char[] str, int l){
@@ -103,6 +105,19 @@ public class Lab1Main {
         }
         else{
             return binomialCoefficent(n-1,k-1)+binomialCoefficent(n-1,k);
+        }
+    }
+    public static int greatCommonDivisor(int a,int b){
+        if(b==0){
+            return a;
+        }
+        else{
+            return greatCommonDivisor(a,a%b);
+        }
+    }
+    public static void printArray(int[] arr){
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
         }
     }
 }
