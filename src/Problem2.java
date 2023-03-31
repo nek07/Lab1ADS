@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 public class Problem2 {
     public static void main(String[] args) {
-        double[] arr1 = {3,2,4,1};
-        double[] arr2 = {5, 4, 100, 49, 34, 54};
-        System.out.println("average = " + average(4, arr1));
-        System.out.println("average = " + average(arr2.length, arr2));
+        Scanner scan=new Scanner(System.in);
+        int size=scan.nextInt();
+        double[] arr=new double[size];
+        for(int i=0;i<size;i++){
+            arr[i]=scan.nextInt();
+        }
+        System.out.println("average = " + average(size, arr));
+
 
     }
     public static double average(int n, double[] numbers){
