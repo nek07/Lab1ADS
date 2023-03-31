@@ -8,6 +8,8 @@ public class Lab1Main {
         for(int i=0;i<size;i++){
             arr[i]=scan.nextInt();
         }*/
+        String str="2345f6789";
+        System.out.println(isDigit(str.toCharArray(),str.length()-1));
 
 
     }
@@ -82,6 +84,26 @@ public class Lab1Main {
             return revArr;
         }
     }
-
+    public static boolean isDigit(char[] str, int l){
+        if(l==0){
+            return true;
+        }
+        else{
+            if(Character.isDigit(str[l])){
+                return isDigit(str,l-1);
+            }
+            else{
+                return false;
+            }
+        }
+    }
+    public static int binomialCoefficent(int n,int k){
+        if(k==0 || k==n){
+            return 1;
+        }
+        else{
+            return n/k*(n-k)*binomialCoefficent(n-1,k-1);
+        }
+    }
 }
 
