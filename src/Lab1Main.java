@@ -8,8 +8,7 @@ public class Lab1Main {
         for(int i=0;i<size;i++){
             arr[i]=scan.nextInt();
         }*/
-        String str="2345f6789";
-        printArray(reverse(new int[]{3, 4, 5, 2, 4},0,5-1));
+        System.out.println(greatCommonDivisor(32,48));
 
 
 
@@ -112,7 +111,7 @@ public class Lab1Main {
             return a;
         }
         else{
-            return greatCommonDivisor(a,a%b);
+            return greatCommonDivisor(b,a%b);
         }
     }
     public static void printArray(int[] arr){
@@ -121,4 +120,3 @@ public class Lab1Main {
         }
     }
 }
-
