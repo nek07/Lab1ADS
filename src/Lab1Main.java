@@ -9,7 +9,7 @@ public class Lab1Main {
             arr[i]=scan.nextInt();
         }*/
         String str="2345f6789";
-        System.out.println(isDigit(str.toCharArray(),str.length()-1));
+        System.out.println(binomialCoefficent(2,1));
 
 
     }
@@ -102,7 +102,7 @@ public class Lab1Main {
             return 1;
         }
         else{
-            return n/k*(n-k)*binomialCoefficent(n-1,k-1);
+            return binomialCoefficent(n-1,k-1)+binomialCoefficent(n-1,k);
         }
     }
 }
