@@ -1,5 +1,5 @@
 # Assignment1 Documentation
- This is my first assignment of Algorithms and Data structures, there is you can see detailed information and explanations of every task.
+ This is my first assignment of Algorithms and Data Structures, there is you can see detailed information and explanations of every task.
 
 ## Lab1Main.java file [src](src/Lab1Main)
 **Each method of tasks belong to this class. Below will be described every function that used to solve problems.**
@@ -8,7 +8,8 @@
 **Description:**
 Return the minimum value in an array.
 
-**Explanation:**In the `FindMinimum` method `n = num[i]` responsible for containing the minimum value in an array, which determined by `n<num[i]` condition in `for` loop and if it is true,then `n=num[i]`, otherwise `n` does not change the value.
+**Explanation:**
+In the `FindMinimum` method `n = num[i]` responsible for containing the minimum value in an array, which determined by `n<num[i]` condition in `for` loop and if it is true,then `n=num[i]`, otherwise `n` does not change the value.
 `return n` responsible for returning the minimum value.
 
 **Solution:**
@@ -46,7 +47,6 @@ public static double average(int n, double[] numbers){
 Check is the number prime or composite.
 
 **Explanation:**
-
 Base cases:
 Firstly, if `n==1` then it is not prime number. Secondly, if `n<=3` then it is prime number. Thirdly, if `n%2==0` or `n%3==0` means that if number divisible by 2 or 3 without remainder, then it is not prime.
 
@@ -81,11 +81,10 @@ There is existed local variable `divisor`, which equals to 5 in the beginning of
 Return the factorial of number.
 
 **Explanation:**
-
-base case:
+Base case:
 If `n<=1` function return n and stop.
 
-recursive case:
+Recursive case:
 function `factorial(n-1)` calls himself, also multiply to `n`, which is a representation of `n*n(-1)`.It continues until `n>1` and the base case will stop the function.
 
 **Solution:**
@@ -105,7 +104,6 @@ public static int factorial(int n){
 Return the number on n-th position of fibonacci sequence
 
 **Explanation:**
-
 Base case:
 If `n<=1` the function return n and stop.
 
@@ -128,7 +126,6 @@ public static int fibonnaci(int n) {
 Return a number to the power of n.
 
 **Explanation:**
-
 Base case: if `n==0` function just return `1` and stop function.
 
 Recursive case: function return `pow(a,n-1)*a` until `n!=0`, `n-1` in this case is decrement.
