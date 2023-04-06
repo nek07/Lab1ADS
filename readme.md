@@ -171,10 +171,15 @@ public static int[] reverse(int[] arr,int left,int right){
 
 ## 	:computer: Task 8
 **Description:**
-Checks is the `char` array contains only digits or not.
+Checks is the `String` type element contains only digits or not.
 
 **Explanation:**
+Firstly, we convert `String` to `charArray`.
 
+Base case: if `l==0` it means function checked all the elements in `str` and do not find non-digit element. So, base case returns `true` and stop the function.
+
+Recursive case:
+This case contains if-else. Main condition is `Character.isDigit(str[l]`, if it is `true` then function call himself until it is return true or until executing base case. `Character.isDigit()` check only one `char` type element.
 
 **Solution:**
 ```java
@@ -198,6 +203,11 @@ public static boolean isDigit(char[] str, int l){
 Return the binomial coefficient of `n` and `k` parameters.
 
 **Explanation:**
+Base case:
+If `k==0` or `k==n` function return 1 and stop.
+
+Recursive case:
+Function return the sum of functions recursively with `(n-1, k-1)` and `(n-1, k)` parameters which is the representation of function, that determine the binomial coefficient.
 
 
 **Solution:**
@@ -217,13 +227,19 @@ public static int binomialCoefficent(int n,int k){
 Find GCD of `a` and `b` by using Euclid Algorithm.
 
 **Explanation:**
+Base case:
+If `b==0` function returns a and stop.
 
-
+Recursive case:
+Return `greatCommonDivisor(b,a%b)` while `b!=0`. Recursive case is the representation of Euclidean Algorithm.
 **Solution:**
 ```java
-public static void printArray(int[] arr){
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+public static int greatCommonDivisor(int a,int b){
+        if(b==0){
+            return a;
         }
-    }
+        else{
+            return greatCommonDivisor(b,a%b);
+        }
+}
 ```
