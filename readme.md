@@ -47,6 +47,11 @@ Check is the number prime or composite.
 
 **Explanation:**
 
+Base cases:
+Firstly, if `n==1` then it is not prime number. Secondly, if `n<=3` then it is prime number. Thirdly, if `n%2==0` or `n%3==0` means that if number divisible by 2 or 3 without remainder, then it is not prime.
+
+Recursive case:
+There is existed local variable `divisor`, which equals to 5 in the beginning of recursive case, also there is `while` loop, which condition `divisor*divisor<=n` and `divisor+=6` increment responsible for avoiding error, infinite loop. In loop, condition `n%divisor==0 || n%(divisor+2)==0` used to exclude numbers, which divisible by small prime numbers. If all the condition do not correct, then function return `prime` in final stage.
 
 **Solution:**
 ```java
@@ -77,6 +82,11 @@ Return the factorial of number.
 
 **Explanation:**
 
+base case:
+If `n<=1` function return n and stop.
+
+recursive case:
+function `factorial(n-1)` calls himself, also multiply to `n`, which is a representation of `n*n(-1)`.It continues until `n>1` and the base case will stop the function.
 
 **Solution:**
 ```java
@@ -96,6 +106,11 @@ Return the number on n-th position of fibonacci sequence
 
 **Explanation:**
 
+Base case:
+If `n<=1` the function return n and stop.
+
+Recursive case:
+In recursive case function calls himself twice and find their sum `fibonnaci(n-1)+fibonnaci(n-2)` which is representation of fibonacci's formula. It continues until base case do not executed.
 
 **Solution:**
 ```java
@@ -114,6 +129,9 @@ Return a number to the power of n.
 
 **Explanation:**
 
+Base case: if `n==0` function just return `1` and stop function.
+
+Recursive case: function return `pow(a,n-1)*a` until `n!=0`, `n-1` in this case is decrement.
 
 **Solution:**
 ```java
@@ -132,8 +150,10 @@ public static int pow(int a,int n){
 Reverse the array without using array data structure.
 
 **Explanation:**
+Base case:
+If `right<=1` is the representation of array's size. If size equals `1`, then function `return arr` and stop.
 
-
+Recursive case: In function we are increasing `left` and decreasing `right` variables and swap elements of array by `left` and `right` indexes while `left < right`.
 **Solution:**
 ```java
 public static int[] reverse(int[] arr,int left,int right){
