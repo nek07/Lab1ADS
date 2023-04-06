@@ -154,6 +154,7 @@ Base case:
 If `right<=1` is the representation of array's size. If size equals `1`, then function `return arr` and stop.
 
 Recursive case: In function we are increasing `left` and decreasing `right` variables and swap elements of array by `left` and `right` indexes while `left < right`.
+
 **Solution:**
 ```java
 public static int[] reverse(int[] arr,int left,int right){
@@ -232,6 +233,7 @@ If `b==0` function returns a and stop.
 
 Recursive case:
 Return `greatCommonDivisor(b,a%b)` while `b!=0`. Recursive case is the representation of Euclidean Algorithm.
+
 **Solution:**
 ```java
 public static int greatCommonDivisor(int a,int b){
