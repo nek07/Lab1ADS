@@ -2,15 +2,71 @@ import java.util.Scanner;
 
 public class Lab1Main {
     public static void main(String[] args) {
+        //testing tasks
         Scanner scan=new Scanner(System.in);
-        /*int size=scan.nextInt();
-        int[] arr=new int[size];
-        for(int i=0;i<size;i++){
-            arr[i]=scan.nextInt();
-        }*/
-        System.out.println(greatCommonDivisor(32,48));
-
-
+        int[] array = {100,23,45,12,345,5,34,13,34,20};
+        System.out.println("1. findMinimum\n"+"2. average\n"+"3. isPrime\n"+
+                "4. factorial\n"+"5. fibonacci\n"+"6. pow\n"+
+                "7. reverse\n"+"8. isDigit\n"+"9. binomial Coef\n"+"10. GCD");
+        int length=array.length;
+        int choice=scan.nextInt();
+        switch(choice){
+            case 1:
+                printArray(array);
+                System.out.println(FindMinimum(length,array));
+                break;
+            case 2:
+                double[] doub={1,2,3,5,9,8};
+                for(int i=0;i<doub.length;i++){
+                    System.out.print(doub[i]+" ");
+                }
+                System.out.println();
+                System.out.println(average(doub.length,doub));
+                break;
+            case 3:
+                System.out.println(13);
+                System.out.println(isPrime(13));
+                System.out.println(39);
+                System.out.println(isPrime(39));
+                break;
+            case 4:
+                System.out.println(6);
+                System.out.println(factorial(6));
+                break;
+            case 5:
+                System.out.println(6);
+                System.out.println(fibonacci(6));
+                System.out.println(10);
+                System.out.println(fibonacci(10));
+                break;
+            case 6:
+                System.out.println(2+" "+5);
+                System.out.println(pow(2,5));
+                break;
+            case 7:
+                printArray(array);
+                System.out.println();
+                printArray(reverse(array,0,length-1));
+                break;
+            case 8:
+                String a="1234a56";
+                String b="1234567";
+                char[] test1=a.toCharArray();
+                char[] test2=b.toCharArray();
+                System.out.println(a);
+                System.out.println(b);
+                System.out.println(isDigit(test1,test1.length-1));
+                System.out.println(isDigit(test2,test2.length-1));
+                break;
+            case 9:
+                System.out.println(10+" "+5);
+                System.out.println(binomialCoefficient(10,5));
+                break;
+            case 10:
+                System.out.println(7+" "+3);
+                System.out.println(greatCommonDivisor(7,3));
+                break;
+        }
 
     }
     /*
@@ -185,6 +241,8 @@ public class Lab1Main {
     public static void printArray(int[] arr){
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
+
         }
+        System.out.println();
     }
 }
